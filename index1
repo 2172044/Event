@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        .container{
+            text-align: center;
+            display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+        }
+        .kotak{
+            border: 1px solid black;
+            background-color:dimgray;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .anggota{
+            border: 1px solid black;
+            background-color:white;
+        }
+        .container{
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+        let nama = [" steve rogers ", " clint barton ", " wanda maximoff ", " bruce banner ", " kate bishop ", " peter parker "];
+
+        let jumlah= prompt("Masukan jumlah nama:")
+        for(let i=0; i<jumlah; i++){
+            let nama1 = prompt("Masukan nama ke" + i);
+            nama.push(nama1);
+        
+            
+        }
+        document.write("<div class='kotak'> Pendaftar: </div>");
+        document.write("<div class='container'>");
+    
+        for(let i=nama.length - 1; i>=0; i++); {
+            document.write("<div class=anggota>" + nama[i] + "</div>");
+        }
+        document.write("</div>");
+    
+        document.write("<div class='kotak'> Pemenang Undian: </div>");
+        let pemenang = Math.round(Math.random() * nama.length);
+        document.write("<div class=anggota>" + nama[pemenang] + "</div>");
+
+    </script>
+</body>
+</html>
